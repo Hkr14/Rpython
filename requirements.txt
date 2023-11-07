@@ -16,3 +16,4 @@ mysql
 mysql-connector-python
 unidecode
 deep_translator
+langdetect
