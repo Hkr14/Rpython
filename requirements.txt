@@ -1,5 +1,4 @@
 Certifi
-time
 charset-normalizerk
 idna
 pyaes
