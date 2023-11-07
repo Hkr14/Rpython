@@ -12,3 +12,4 @@ names
 pyrogram
 colored
 termcolor
+mysql
