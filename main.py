@@ -49,4 +49,7 @@ async def callback_privates(client, callback_query):
   print('iniciado !')
 
 if __name__ == "__main__":
-    asyncio.run(main())
+	os.system('clear')    
+	print('iniciado Kimura CHK')         
+	bot.run()
+	print('iniciado Kimura CHK')
