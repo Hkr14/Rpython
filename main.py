@@ -50,4 +50,4 @@ async def main():
     print('iniciado !')
 
 if __name__ == "__main__":
-    async.run(main())
+    asyncio.run(main())
