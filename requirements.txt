@@ -14,4 +14,4 @@ colored
 termcolor
 mysql
 mysql-connector-python
-unicode
+unidecode
