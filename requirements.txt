@@ -20,3 +20,4 @@ langdetect
 faker
 aiohttp
 aiofiles
+random_address
