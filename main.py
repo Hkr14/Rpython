@@ -7,13 +7,12 @@ from pyrogram.errors import RPCError, BadRequest
 import logging
 from termcolor import colored
 
-async def main():
-    bot = Client(
-        "Alexcodex",
-        api_hash=Config.API_HASH,
-        api_id=Config.API_ID,
-        bot_token=Config.BOT_TOKEN,
-        plugins=dict(root="plugins"),
+bot = Client(
+    "KimuraBot",
+    api_hash=Config.API_HASH,   
+    api_id=Config.API_ID,
+    bot_token=Config.BOT_TOKEN,
+    plugins=dict(root="plugins"),
     )
 
     @bot.on_callback_query()
