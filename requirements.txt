@@ -18,3 +18,5 @@ unidecode
 deep_translator
 langdetect
 faker
+aiohttp
+aiofiles
