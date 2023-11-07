@@ -15,3 +15,6 @@ termcolor
 mysql
 mysql-connector-python
 unicode
+aiogram
+random
+json
