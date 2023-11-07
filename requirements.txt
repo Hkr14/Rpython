@@ -10,5 +10,4 @@ urllib3
 bs4
 names
 pyrogram
-json
 colored
