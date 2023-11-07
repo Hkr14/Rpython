@@ -42,11 +42,7 @@ async def callback_privates(client, callback_query):
       while True:
           await asyncio.sleep(60)  # Esperar 60 segundos antes de volver a verificar eventos
 
-  except Exception as e:
-      print(e)
-  finally:
-      await bot.stop()
-  print('iniciado !')
+  
 
 if __name__ == "__main__":
 	os.system('clear')    
