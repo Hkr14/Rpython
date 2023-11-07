@@ -13,3 +13,4 @@ pyrogram
 colored
 termcolor
 mysql
+mysql-connector-python
