@@ -1,4 +1,4 @@
-import BotAuthorization
+from pyrogram import BotAuthorization
 import os
 import asyncio
 from configs import Config
