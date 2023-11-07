@@ -10,9 +10,6 @@ urllib3
 bs4
 names
 pyrogram
-aiogram
-os
-random
 asyncio
 json
 colored
