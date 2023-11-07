@@ -1,5 +1,4 @@
 Certifi
-charset-normalizerk
 idna
 pyaes
 Pyrogram
