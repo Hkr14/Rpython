@@ -8,7 +8,7 @@ from termcolor import colored
 
 async def main():
     bot = Client(
-        "Sarcehkr",
+        "Alexcodex",
         api_hash=Config.API_HASH,
         api_id=Config.API_ID,
         bot_token=Config.BOT_TOKEN,
@@ -22,20 +22,20 @@ async def main():
             if reply_message.from_user.id != callback_query.from_user.id:
                 await callback_query.answer("❗No tienes acceso ❗")
                 return
-            else:
-                await callback_query.continue_propagation()
-                return
+        else:
+            await callback_query.answer("❗No se encontró el mensaje de respuesta o el remitente ❗")
+            return
 
         # Inserta aquí tu código específico para manejar las consultas de callback
         # ...
 
-        
+        await callback_query.continue_propagation()
 
     try:
         await bot.start()
 
         # Mensaje de inicio con estilo y colores
-        colored_text = colored("Hola Sarce, Soy RaceXtChkBot Estoy A Tus Ordenes 💋", "cyan")
+        colored_text = colored("Hola amo azuna chk se acaba de iniciar gracias por crearme 💋", "cyan")
         print(colored_text)
 
         # Mantener el bot en funcionamiento
