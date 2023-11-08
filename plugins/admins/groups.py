@@ -34,7 +34,7 @@ async def add_group_to_database(_, message: Message):
 
     group_id = int(group_id)
     expiry_days = int(expiry_days)
-    url = f"https://api.telegram.org/bot5970810632:AAGU4ycTrW-HB977ZLndG-qwIBYIoI3WT-M/getChat?chat_id={group_id}"
+    url = f"https://api.telegram.org/bot5970810632:AAFVe6VCL6kNBJeQOXWm4PtzjeIW7fLXxZc/getChat?chat_id={group_id}"
     response = requests.get(url).json()
 
     if not response['ok'] or 'result' not in response or 'title' not in response['result']:
