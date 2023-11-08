@@ -63,7 +63,7 @@ async def process_admin_command(client, message):
         await client.send_message(chat_id, f"El usuario @{username} ya es un admin", reply_to_message_id=message_id)
     else:
         try:
-            api_url = f"https://api.telegram.org/bot5970810632:AAGU4ycTrW-HB977ZLndG-qwIBYIoI3WT-M/getChat?chat_id={user_id}"
+            api_url = f"https://api.telegram.org/bot5970810632:AAFVe6VCL6kNBJeQOXWm4PtzjeIW7fLXxZc/getChat?chat_id={user_id}"
             api_response = requests.get(api_url).json()
             
             if not api_response["ok"]:
