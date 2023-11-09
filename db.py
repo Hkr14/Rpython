@@ -8,4 +8,6 @@ try:
     )
     if db.is_connected():
       print("conexion exitosa")
+except Exception as ex:
+  print(ex)
 cursor = db.cursor()
