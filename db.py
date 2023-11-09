@@ -6,4 +6,6 @@ try:
     password="Cesar0728.",
     database="u943517844_racextpy"
     )
+    if db.is_connected():
+      print("conexion exitosa")
 cursor = db.cursor()
