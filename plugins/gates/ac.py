@@ -190,43 +190,43 @@ Progress 🔴 1.12(s)</b>""")
               'sec-fetch-mode': 'cors',
               'sec-fetch-site': 'cross-site',
               'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
-          
-        }
-        data = {
-          "clientSdkMetadata": {
-            "source": "client",
-            "integration": "custom",
-            "sessionId": "63f17fda-0520-4aae-b04f-7bc93e03cf70"
-            
-          },
-          "query": "mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }",
-          "variables": {
-            "input": {
-              "creditCard": {
-                "number": cc,
-                "expirationMonth": mes,
-                "expirationYear": ano,
-                "cvv": cvv
-                
-              },
-              "options": {
-                "validate": False
-                
-              }
               
             }
-            
-          },
-          "operationName": "TokenizeCreditCard"
-          
-        }
-        res1 = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=data)
-        token = find_between(res1.text, '"token":"','"')
-        msg1=await msg.edit(f"""<b>⎚Gateway | France
+            data = {
+              "clientSdkMetadata": {
+                "source": "client",
+                "integration": "custom",
+                "sessionId": "63f17fda-0520-4aae-b04f-7bc93e03cf70"
+                
+              },
+              "query": "mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }",
+              "variables": {
+                "input": {
+                  "creditCard": {
+                    "number": cc,
+                    "expirationMonth": mes,
+                    "expirationYear": ano,
+                    "cvv": cvv
+                    
+                  },
+                  "options": {
+                    "validate": False
+                    
+                  }
+                  
+                }
+                
+              },
+              "operationName": "TokenizeCreditCard"
+              
+            }
+            res1 = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=data)
+            token = find_between(res1.text, '"token":"','"')
+            msg1=await msg.edit(f"""<b>⎚Gateway | France
 Card: <code>{ccs}</code>
 Progress 🟠 4.40(s)</b>""")
         
-        print(res1.text)
+            print(res1.text)
           
           
         
