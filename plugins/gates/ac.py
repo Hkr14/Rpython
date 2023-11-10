@@ -304,9 +304,9 @@ Progress 🟢 6.20(s)</b>""")
             elif 'The card type is invalid or does not correlate with the credit card number.  Please try again or use an alternate card or other form of payment.' in res2.text:
               status = "Declined❌"
               msg = "The card type is invalid or does not correlate with the credit card number"
-            elif 'The card type is invalid or does not correlate with the credit card number.  Please try again or use an alternate card or other form of payment.' in res2.text:
+            elif 'We were unable to process your order, please try again.' in res2.text:
               status = "Declined❌"
-              msg = "The card type is invalid or does not correlate with the credit card number"
+              msg = "We were unable to process your order, please try again."
             await msg2.edit(f"""
 <b> 
 
