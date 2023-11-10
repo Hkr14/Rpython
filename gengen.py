@@ -20,7 +20,7 @@ from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup
 )
-from db import*
+from db import *
 
 
 @Client.on_callback_query()
