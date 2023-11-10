@@ -178,18 +178,18 @@ Progress 🔴 1.12(s)</b>""")
             
             #############
             headers = {
-          'authority': 'payments.braintree-api.com',
-          'accept': '*/*',
-          'accept-language': 'es-MX,es-419;q=0.9,es;q=0.8,en;q=0.7',
-          'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE2OTk2NTMwODgsImp0aSI6ImMzY2FkOTZlLTkzZjAtNDhlNS1iZThhLTY3ZTcyOTlmMDM2YSIsInN1YiI6IjloNXdweHg1anA2eG0zamQiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjloNXdweHg1anA2eG0zamQiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.xGf1-8X3vkYum6EkSd0tW7Tjwoq7X2FUtLqQjAq4PeTc7bVybShIsPrn1CrOdpvrbwxVKnDoeQxH9zLbjzLYqA',
-          'braintree-version': '2018-05-10',
-          'content-type': 'application/json',
-          'origin': 'https://assets.braintreegateway.com',
-          'referer': 'https://assets.braintreegateway.com/',
-          'sec-fetch-dest': 'empty',
-          'sec-fetch-mode': 'cors',
-          'sec-fetch-site': 'cross-site',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
+              'authority': 'payments.braintree-api.com',
+              'accept': '*/*',
+              'accept-language': 'es-MX,es-419;q=0.9,es;q=0.8,en;q=0.7',
+              'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE2OTk2NTMwODgsImp0aSI6ImMzY2FkOTZlLTkzZjAtNDhlNS1iZThhLTY3ZTcyOTlmMDM2YSIsInN1YiI6IjloNXdweHg1anA2eG0zamQiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjloNXdweHg1anA2eG0zamQiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.xGf1-8X3vkYum6EkSd0tW7Tjwoq7X2FUtLqQjAq4PeTc7bVybShIsPrn1CrOdpvrbwxVKnDoeQxH9zLbjzLYqA',
+              'braintree-version': '2018-05-10',
+              'content-type': 'application/json',
+              'origin': 'https://assets.braintreegateway.com',
+              'referer': 'https://assets.braintreegateway.com/',
+              'sec-fetch-dest': 'empty',
+              'sec-fetch-mode': 'cors',
+              'sec-fetch-site': 'cross-site',
+              'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
           
         }
         data = {
