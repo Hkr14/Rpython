@@ -58,9 +58,9 @@ async def ch(_, message: Message):
 
             if len(data) < 2:
                 await message.reply_text("""
-<i>⊗ Comando</i><i>/bg</i>
+<i>⊗ Comando</i><i>/ac</i>
 <i>⊗ Formato:</i> <code>cc|mm|yy|cvv</code>
-<i>⊗ Gateway:</i><code>Bogota</code>""")
+<i>⊗ Gateway:</i><code>France</code>""")
                 return
 
             ccs = data[1]
