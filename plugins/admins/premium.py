@@ -31,7 +31,7 @@ async def process_command(client, message):
     expiration_date_str = expiration_date.strftime("%Y-%m-%d %H:%M:%S")
 
     # Realizar la actualización en la base de datos
-    update_query = "UPDATE users SET status = 'premium', expiration_date = %s WHERE user_id = %s"
+    update_query = "UPDATE users SET status = 'Premium', expiration_date = %s WHERE user_id = %s"
     cursor.execute(update_query, (expiration_date_str, user_id))
     db.commit()
 
