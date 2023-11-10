@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import mysql.connector
-from db import*
+from db import *
 import asyncio
 import re
 import colored 
