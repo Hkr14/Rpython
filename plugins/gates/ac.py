@@ -247,7 +247,7 @@ Progress 🟠 4.40(s)</b>""")
               
             }
             data = {
-              'billing_first_name': first,
+              'billing_first_name': p_nombre,
               'billing_last_name': 'muno',
               'billing_company': '',
               'billing_country': 'US',
