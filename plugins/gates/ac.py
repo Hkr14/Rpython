@@ -156,7 +156,7 @@ async def ch(_, message: Message):
             bank = req['bank']
             level = req['level']
             typea  = req['type']
-            msg=await message.reply(f"""<b>⎚Gateway| Bogota
+            msg=await message.reply(f"""<b>⎚Gateway| France
 Card: <code>{ccs}</code>
 Progress 🔴 1.12(s)</b>""")
             
