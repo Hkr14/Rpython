@@ -87,7 +87,7 @@ async def ch(_, message: Message):
             
             if len(resultGroups) > 0:
                 row = resultGroups[0]
-            if row and row[3] == 'premium':  # Verificar si 'row' tiene un valor antes de acceder a sus elementos
+            if row and row[3] == 'Premium':  # Verificar si 'row' tiene un valor antes de acceder a sus elementos
                 isPremium = True
 
             
