@@ -6,6 +6,7 @@ import re
 import colored 
 from asyncio import sleep
 import os
+import mysql.connector
 from pyrogram import Client, filters
 from pyrogram.types import (
     Message,
