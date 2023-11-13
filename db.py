@@ -2,7 +2,7 @@ import mysql.connector
 
 db = mysql.connector.connect(
   host='',
-  user= 'u943517844_racextpy',
+  user= '',
   passwd='Cesar0728.', 
   database='u943517844_racextpy' )
 cur = db.cursor()
@@ -11,7 +11,7 @@ import mysql.connector
 
 db = mysql.connector.connect(
     host="185.214.132.8",
-    user="root",
+    user="u943517844_racextpy",
     password="",
     database="BUENO"
 )
