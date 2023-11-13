@@ -22,3 +22,4 @@ aiohttp
 aiofiles
 random_address
 speedtest
+aiomysql
