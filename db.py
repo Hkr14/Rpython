@@ -6,7 +6,7 @@ db = mysql.connector.connect(
   passwd='', 
   database='' )
 cur = db.cursor()
-db.close()
+
 import mysql.connector
 
 db = mysql.connector.connect(
@@ -16,3 +16,4 @@ db = mysql.connector.connect(
     database="u943517844_racextpy"
 )
 cursor = db.cursor()
+db.close()
