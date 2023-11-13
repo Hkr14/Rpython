@@ -7,4 +7,3 @@ db = mysql.connector.connect(
     database="u943517844_racextpy"
 )
 cursor = db.cursor()
-db.close()
