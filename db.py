@@ -13,4 +13,3 @@ async def test_example():
   print(r)
   await cur.close()
   conn.close()
-  loop.run_until_complete(test_example())
