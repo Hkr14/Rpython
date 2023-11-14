@@ -175,13 +175,7 @@ async def ch(_, message: Message):
              return  
                 # Verifica el resultado y almacena el valor en la variable "rank"
             
-            rank = result[0]
-            if message.from_user.id in antispam_users and antispam_users[message.from_user.id] + 16 > int(time.time()):
-             time_left = antispam_users[message.from_user.id] + 16 - int(time.time())
-             await message.reply_text(f"❗️ [<i>ANTISPAM DETECTADO</i>]. Espera {time_left} segundos antes de enviar otro comando.")
-             return 
-            else:
-             antispam_users[message.from_user.id] = int(time.time())
+            
 
     # ... (el resto del código existente)
     # ... (el resto del código existente)
