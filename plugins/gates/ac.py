@@ -181,7 +181,7 @@ Progress 🔴 1.12(s)</b>""")
               'authority': 'payments.braintree-api.com',
               'accept': '*/*',
               'accept-language': 'es-MX,es-419;q=0.9,es;q=0.8,en;q=0.7',
-              'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE2OTk3MjMwMTQsImp0aSI6Ijg4ZjkzZmQ0LWJmNjEtNDdmMy05ZWJmLTM0NDQ1NTE3OTZmYiIsInN1YiI6IjloNXdweHg1anA2eG0zamQiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjloNXdweHg1anA2eG0zamQiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.6vEAujs444BNz0Xa7Y-3cL0qIeNPnWE03o0dsSGeStpAGeHthhXamkYIjJW5Sfu0dxYCA5YB1i8pG3smrwGA1Q',
+              'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MDAwMTAxMzMsImp0aSI6IjBhMDNlNWJlLTJiY2QtNDRkZS05ZTI0LTMyYjM1Yzg2NGZlYSIsInN1YiI6IjloNXdweHg1anA2eG0zamQiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjloNXdweHg1anA2eG0zamQiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.c5mYx0jNy2k_38kCfnGn1P5iAX-iZyOcbSaBuX_XRDLs1rxjAjiE8gBhUWpeqwLiTebcoh4H_hNYoBuYCJhXOg',
               'braintree-version': '2018-05-10',
               'content-type': 'application/json',
               'origin': 'https://assets.braintreegateway.com',
