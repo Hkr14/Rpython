@@ -278,7 +278,7 @@ Progress 🟠 4.40(s)</b>""")
               'wc_braintree_device_data': '',
               'terms': 'on',
               'terms-field': '1',
-              'woocommerce-process-checkout-nonce': '3669d74d1c',
+              'woocommerce-process-checkout-nonce': 'f2bcc539ec',
               '_wp_http_referer': '/?wc-ajax=update_order_review'
               
             }
