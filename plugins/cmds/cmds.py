@@ -66,6 +66,13 @@ async def handle_buttons(client, callback_query):
     
     user_id = callback_query.from_user.id
     
+    db = mysql.connector.connect(
+        host="185.214.132.8",
+        user="u943517844_racextpy",
+        password="Cesar0728.",
+        database="u943517844_racextpy"
+    )
+    cursor = db.cursor()
 
         # Crea una conexión a la base de datos
     
